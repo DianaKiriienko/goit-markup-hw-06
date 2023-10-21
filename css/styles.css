@@ -410,11 +410,13 @@ img {
 
 .footer-container {
   display: flex;
-  align-items: baseline;
+  /* align-items: baseline; */
+  flex-direction: column;
+  gap: 72px;
 }
 
 .footer-right {
-  margin-right: 120px;
+  /* margin-right: 120px; */
 }
 
 .footer-logo {
@@ -425,8 +427,10 @@ img {
   line-height: 1.17;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 17.5px;
 }
 .footer-logo-span {
   color: #f4f4fd;
@@ -436,7 +440,7 @@ img {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  max-width: 264px;
+  max-width: 288px;
 }
 
 .footer-soc-title {
@@ -445,12 +449,14 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
   margin-bottom: 16px;
 }
 .footer-soc-wrap {
 }
 .footer-soc-list {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 16px;
 }
@@ -481,7 +487,6 @@ img {
 }
 
 .footer-left {
-  margin-left: 80px;
 }
 
 .footer-left-title {
@@ -490,25 +495,28 @@ img {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: center;
   margin-bottom: 16px;
 }
 
 .footer-form {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 24px;
+  gap: 16px;
+  width: 100%;
 }
 
 .footer-input {
   border: none;
-  width: 264px;
+  width: 288px;
   height: 40px;
   flex-shrink: 0;
   background-color: transparent;
   border-radius: 4px;
   border: 1px solid #fff;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding: 8px 16px;
   outline: transparent;
   color: #fff;
@@ -527,13 +535,12 @@ img {
 }
 
 .footer-form-btn {
-  min-width: 165px;
+  width: 165px;
   border-radius: 4px;
   background: #4d5ae5;
   border: none;
   padding: 8px 24px;
   color: #fff;
-  text-align: center;
   font-size: 16px;
   font-weight: 500;
   line-height: 1.5;
@@ -836,6 +843,32 @@ img {
     width: 356px;
     height: 300px;
   }
+
+  .footer-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 72px 24px;
+  }
+
+  .footer-input {
+    width: 264px;
+  }
+
+  .footer-logo {
+    display: inline-block;
+  }
+
+  .footer-text {
+    max-width: 264px;
+  }
+
+  .footer-soc-title {
+    text-align: start;
+  }
+
+  .footer-left-title {
+    text-align: start;
+  }
 }
 
 @media screen and (min-width: 1158px) {
@@ -909,5 +942,28 @@ img {
   .portfolio-images {
     width: 360px;
     height: 300px;
+  }
+
+  .footer-container {
+    /* flex-direction: row; */
+    align-items: baseline;
+    width: 100%;
+    gap: 80px;
+  }
+
+  .footer-right {
+    margin-right: 40px;
+  }
+
+  .footer-logo {
+    margin-bottom: 16px;
+  }
+
+  .footer-left {
+    /* margin-left: 80px; */
+  }
+
+  .footer-form {
+    gap: 24px;
   }
 }
