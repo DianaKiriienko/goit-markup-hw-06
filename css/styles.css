@@ -729,7 +729,7 @@ img {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 72px 24px 24px 24px;
+  padding: 72px 16px 24px 16px;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -900,34 +900,39 @@ img {
   font-weight: 400;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
 }
 
-.check-text a {
+.modal-check-link {
   color: #4d5ae5;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.33;
   letter-spacing: 0.04em;
   text-decoration-line: underline;
-  margin-left: 6px;
 }
 
 .check-text-span {
-  display: inline-flex;
+  display: flex;
   align-items: center;
   justify-content: center;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
-  margin-right: 8px;
   fill: transparent;
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
     border 250ms cubic-bezier(0.4, 0, 0.2, 1),
     fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.check-input:checked + .check-text span {
+.check-text-accept {
+}
+
+.check-input:checked + .check-text > .check-text-span {
   border: none;
   background-color: #404bbf;
   fill: #f4f4fd;
@@ -1032,6 +1037,12 @@ img {
   .modal {
     width: 408px;
     min-height: 584px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .modal-check-link {
+    margin-left: 6px;
   }
 }
 
