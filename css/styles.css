@@ -288,14 +288,26 @@ img {
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
     ),
-    url(../images/bg-hero.jpg);
+    url(../images/bg-hero-mob.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  /* width: 100%; */
+  width: 100%;
   margin: 0 auto;
   padding-top: 72px;
   padding-bottom: 72px;
+}
+
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-hero-mob-2x.jpg);
+  }
 }
 
 .hero-title {
@@ -919,6 +931,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-shrink: 0;
   width: 16px;
   height: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
@@ -967,6 +980,23 @@ img {
   .hero {
     padding-top: 112px;
     padding-bottom: 112px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-hero-tab.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/bg-hero-tab-2x.jpg);
+    }
   }
 
   .hero-title {
@@ -1071,6 +1101,23 @@ img {
     padding-top: 188px;
     padding-bottom: 188px;
     max-width: 1440px;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7),
+        rgba(46, 47, 66, 0.7)
+      ),
+      url(../images/bg-hero.jpg);
+  }
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: linear-gradient(
+          rgba(46, 47, 66, 0.7),
+          rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/bg-hero-2x.jpg);
+    }
   }
 
   .benefits-list {
